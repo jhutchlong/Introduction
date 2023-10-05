@@ -3,9 +3,10 @@ package com.example.demo.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotBlank;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Person {
+public class Person implements Serializable {
     private final UUID id;
 
     @NotBlank
