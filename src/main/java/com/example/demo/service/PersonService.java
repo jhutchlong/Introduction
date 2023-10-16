@@ -40,4 +40,8 @@ public class PersonService {
         return personDao.updatePersonById(id, newPerson);
     }
 
+    public List<Person> searchForPeople(int sat) {
+        return personDao.searchForPeople(sat);
+    }
+
 }

@@ -46,4 +46,9 @@ public class PersonController {
     public void updatePerson(@PathVariable("id") UUID id, @Valid @NonNull @RequestBody Person personToUpdate) {
         personService.updatePerson(id, personToUpdate);
     }
+
+    @GetMapping(path = "search")
+    public List<Person> searchForPeople(@RequestParam("sat") int sat) {
+        return personService.searchForPeople(sat);
+    }
 }

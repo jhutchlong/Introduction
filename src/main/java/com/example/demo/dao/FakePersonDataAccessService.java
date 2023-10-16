@@ -54,4 +54,12 @@ public class FakePersonDataAccessService implements PersonDao {
                 })
                 .orElse(0);
     }
+
+    @Override
+    public List<Person> searchForPeople(int sat) {
+        return DB.stream()
+                .filter(person -> person.getSat() >= sat)
+                .toList();
+    }
+
 }
